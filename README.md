@@ -8,3 +8,4 @@ This is a free software with NO WARRANTY.
 
 The code is an adaptation from examples of the excellent AnimatedGIF lib
 
+look at this video https://youtube.com/shorts/dwzyfPdCEOI
