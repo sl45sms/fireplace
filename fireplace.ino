@@ -15,9 +15,11 @@
 #define DISPLAY_HEIGHT 240
 
 // ST7789 TFT module connections
-#define TFT_DC    D1     // TFT DC  pin is connected to NodeMCU pin D1 (GPIO5)
-#define TFT_RST   D2     // TFT RST pin is connected to NodeMCU pin D2 (GPIO4)
-#define TFT_CS    D8     // TFT CS  pin is connected to NodeMCU pin D8 (GPIO15)
+#define TFT_DC    D1     // TFT DC  pin is connected to NodeMCU pin D1 (GPIO5)   esp12-f/e pin 20
+#define TFT_RST   D2     // TFT RST pin is connected to NodeMCU pin D2 (GPIO4)   esp12-f/e pin 19
+#define TFT_CS    D8     // TFT CS  pin is connected to NodeMCU pin D8 (GPIO15)  esp12-f/e pin 16 - may not used on all displays
+#define TFT_SDA   D7     // TFT SDA pin is connected to NodeMCU pin D7 (GPIO13)  esp12-f/e pin 7
+#define TFT_SCL   D5     // TFT SCL pin is connected to NodeMCU pin D5 (GPIO14)  esp12-f/e pin 5
 
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 AnimatedGIF gif;
