@@ -15,11 +15,13 @@
 #define DISPLAY_HEIGHT 240
 
 // ST7789 TFT module connections
-#define TFT_DC    D1     // TFT DC  pin is connected to NodeMCU pin D1 (GPIO5)   esp12-f/e pin 20
-#define TFT_RST   D2     // TFT RST pin is connected to NodeMCU pin D2 (GPIO4)   esp12-f/e pin 19
-#define TFT_CS    D8     // TFT CS  pin is connected to NodeMCU pin D8 (GPIO15)  esp12-f/e pin 16 - may not used on all displays
-#define TFT_SDA   D7     // TFT SDA pin is connected to NodeMCU pin D7 (GPIO13)  esp12-f/e pin 7
-#define TFT_SCL   D5     // TFT SCL pin is connected to NodeMCU pin D5 (GPIO14)  esp12-f/e pin 5
+#define TFT_DC    D1     // TFT DC  pin is connected to NodeMCU pin D1 (GPIO5)   esp12-f/e pin 20 - Data/Command
+#define TFT_RST   D2     // TFT RST pin is connected to NodeMCU pin D2 (GPIO4)   esp12-f/e pin 19 - Reset pin
+#define TFT_CS    D8     // TFT CS  pin is connected to NodeMCU pin D8 (GPIO15)  esp12-f/e pin 16 - not used on all displays, use SPI_MODE2 in this case 
+#define TFT_SDA   D7     // TFT SDA pin is connected to NodeMCU pin D7 (GPIO13)  esp12-f/e pin 7  - Hardware SPI MOSI
+#define TFT_SCL   D5     // TFT SCL pin is connected to NodeMCU pin D5 (GPIO14)  esp12-f/e pin 5  - Hardware SPI CLK
+#define TFT_BLK   D0     // TFT BLK pin is connected to NodeMCU pin D0 (GPIO16)  esp12-f/e pin 4  - Backlight control (high, low) or set to high always
+
 
 Adafruit_ST7789 tft = Adafruit_ST7789(TFT_CS, TFT_DC, TFT_RST);
 AnimatedGIF gif;
